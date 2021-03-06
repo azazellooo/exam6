@@ -1,0 +1,104 @@
+[
+{
+  "model": "webapp.note",
+  "pk": 1,
+  "fields": {
+    "name": "John Doe",
+    "email": "johndoe@example.com",
+    "text": "content",
+    "created_at": "2021-03-06T06:06:03.773Z",
+    "updated_at": "2021-03-06T06:06:03.774Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.note",
+  "pk": 2,
+  "fields": {
+    "name": "Vasya Pupkin",
+    "email": "pupkin@example.com",
+    "text": "text",
+    "created_at": "2021-03-06T06:06:56.863Z",
+    "updated_at": "2021-03-06T06:06:56.863Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.note",
+  "pk": 4,
+  "fields": {
+    "name": "Masha Maria",
+    "email": "mawa@example.com",
+    "text": "content",
+    "created_at": "2021-03-06T06:08:05.600Z",
+    "updated_at": "2021-03-06T06:08:05.600Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.note",
+  "pk": 5,
+  "fields": {
+    "name": "Aygerim Almazbekova",
+    "email": "almazbekova_a@example.com",
+    "text": "content",
+    "created_at": "2021-03-06T06:08:51.512Z",
+    "updated_at": "2021-03-06T06:08:51.512Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.note",
+  "pk": 7,
+  "fields": {
+    "name": "Ivan Ivanov",
+    "email": "ivanov@example.com",
+    "text": "content",
+    "created_at": "2021-03-06T06:11:06.017Z",
+    "updated_at": "2021-03-06T06:11:06.017Z",
+    "status": "blocked"
+  }
+},
+{
+  "model": "webapp.note",
+  "pk": 8,
+  "fields": {
+    "name": "Meerim Mambetova",
+    "email": "meka@example.com",
+    "text": "content",
+    "created_at": "2021-03-06T06:11:24.797Z",
+    "updated_at": "2021-03-06T06:11:24.797Z",
+    "status": "blocked"
+  }
+},
+{
+  "model": "webapp.note",
+  "pk": 9,
+  "fields": {
+    "name": "maria holtzman",
+    "email": "holtzman@example.com",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+    "created_at": "2021-03-06T06:52:15.423Z",
+    "updated_at": "2021-03-06T06:52:15.423Z",
+    "status": "active"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$216000$wDGP9OBSI3Rp$Yucb5a6x7Jx+4UVw03tUYZtm6zhYAz90vbK/dgCkMCQ=",
+    "last_login": "2021-03-06T05:43:23.213Z",
+    "is_superuser": true,
+    "username": "user",
+    "first_name": "",
+    "last_name": "",
+    "email": "karlygachkenenbaeva@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2021-03-06T05:43:13.112Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
