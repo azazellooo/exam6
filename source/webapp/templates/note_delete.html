@@ -1,5 +1,5 @@
 {%  extends 'base.html' %}
-
+{% block title %}удалить запись{% endblock title %}
 {% block content %}
     <div style="background-color: aliceblue">
     <div class="container" style="padding: 10%">
@@ -9,7 +9,7 @@
         {% csrf_token %}
         <input type="submit" class="btn btn-warning btn-m" value="да" style="margin-right: 20px" >
     </form>
-        <p><a class="btn btn-secondary btn-sm" href="{% url "note-list" %}" role="button">Отмена</a></p>
+        <p><a class="btn btn-secondary btn-m" href="{% url "note-list" %}" role="button">Отмена</a></p>
     </div>
     </div>
     </div>

@@ -2,8 +2,12 @@
 {% block title %}все записи{% endblock title %}
 {% block content %}
     <div class="jumbotron" style="background-color: aliceblue">
-      <h1 class="display-4">Гостевая книга</h1>
-      <hr class="my-4">
+        <form class="d-flex" action="{% url "note-list" %}" method="get">
+            <input class="form-control me-2 w-25 mr-2" type="text" name="q" >
+            <input class="btn btn-outline-success" type="submit" value="Поиск">
+        </form>
+        <h1 class="display-4">Гостевая книга</h1>
+        <hr class="my-4">
         {% if not notes %}
             <h3>Записей нет</h3>>
         {% else %}

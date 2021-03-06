@@ -6,6 +6,10 @@ from webapp.forms import NoteForm
 
 def index_view(request):
     notes = Note.objects.all().filter(status='active').order_by('-created_at')
+    if 'q' in request.GET:
+        q = request.GET['q']
+        notes = Note.objects.filter(name__icontains=q)
+        return render(request, 'index.html', context={'notes': notes, 'query': q})
     return render(request, 'index.html', context={'notes': notes})
 
 
