@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 
 from webapp.models import Note, status_choices
 from webapp.forms import NoteForm
@@ -23,4 +23,25 @@ def note_create_view(request):
             )
             return redirect('note-list')
         return render(request, 'note_create.html', context={'form': form})
+
+
+def note_update_view(request, pk):
+    note = get_object_or_404(Note, id=pk)
+    if request.method == 'GET':
+        form = NoteForm(initial={
+            'name': note.name,
+            'email': note.email,
+            'text': note.text
+        })
+        return render(request, 'note_update.html', context={'note': note, 'form': form})
+    elif request.method == 'POST':
+        form = NoteForm(data=request.POST)
+        if form.is_valid():
+            note.name = form.cleaned_data.get('name')
+            note.email = form.cleaned_data.get('email')
+            note.text = form.cleaned_data.get('text')
+            note.save()
+            return redirect('note-list')
+        return render(request, 'note_update.html', context={'form': form, 'task': note})
+
 # Create your views here.

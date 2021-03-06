@@ -10,7 +10,7 @@
         {% for note in notes %}
             <div class="alert alert-secondary" role="alert">
                 <h5> {{ note.name }} ({{ note.email }})</h5>
-                <a class="btn btn-light btn-sm" href="#" role="button">редактировать</a>
+                <a class="btn btn-light btn-sm" href="{% url "note-update" note.id %}" role="button">редактировать</a>
                 <a class="btn btn-light btn-sm" href="#" role="button">удалить</a>
                 <p>{{ note.text }}</p>
             </div>
