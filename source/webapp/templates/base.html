@@ -9,8 +9,8 @@
 </head>
     <nav class="navbar navbar-light" style="background-color: lightsteelblue;">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">все записи</a>
-        <a class="navbar-brand" href="#">новая запись</a>
+        <a class="navbar-brand" href="{% url "note-list" %}">все записи</a>
+        <a class="navbar-brand" href="{% url "note-add" %}">новая запись</a>
       </div>
     </nav>
     {% block content %} {% endblock content %}
