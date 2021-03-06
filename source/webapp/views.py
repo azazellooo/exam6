@@ -5,7 +5,7 @@ from webapp.forms import NoteForm
 
 
 def index_view(request):
-    notes = Note.objects.all().filter(status='active').order_by('created_at', 'updated_at')
+    notes = Note.objects.all().filter(status='active').order_by('-created_at')
     return render(request, 'index.html', context={'notes': notes})
 
 
@@ -44,4 +44,13 @@ def note_update_view(request, pk):
             return redirect('note-list')
         return render(request, 'note_update.html', context={'form': form, 'task': note})
 
+
+def note_delete_view(request, pk):
+    note = get_object_or_404(Note, id=pk)
+    if request.method == "GET":
+        return render(request, 'note_delete.html', context={'note': note})
+    elif request.method == "POST":
+        note.delete()
+        return redirect('note-list')
 # Create your views here.
+

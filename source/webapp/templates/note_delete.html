@@ -1,0 +1,17 @@
+{%  extends 'base.html' %}
+
+{% block content %}
+    <div style="background-color: aliceblue">
+    <div class="container" style="padding: 10%">
+    <h2>Вы уверены, что хотите удалить запись № {{ note.id }}?</h2>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+    <form action="{% url "note-delete" note.id %}" method="post">
+        {% csrf_token %}
+        <input type="submit" class="btn btn-warning btn-m" value="да" style="margin-right: 20px" >
+    </form>
+        <p><a class="btn btn-secondary btn-sm" href="{% url "note-list" %}" role="button">Отмена</a></p>
+    </div>
+    </div>
+    </div>
+
+{% endblock content %}
